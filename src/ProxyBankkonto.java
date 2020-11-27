@@ -37,9 +37,9 @@ public class ProxyBankkonto implements InterfaceBankkonto {
 		if(verifyPassword()) {
 			double amount;
 			Scanner sc1 = new Scanner(System.in);
-			System.out.println("1\tAbheben");
-			System.out.println("2\tEinzahlen");
-			System.out.println("3\tKontostand");
+			System.out.println("1  ...\tAbheben");
+			System.out.println("2  ...\tEinzahlen");
+			System.out.println("3  ...\tKontoinformation");
 			System.out.print("Ihre Wahl: ");
 			int function = sc1.nextInt();	
 			switch (function) {
