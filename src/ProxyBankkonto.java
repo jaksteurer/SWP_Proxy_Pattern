@@ -44,28 +44,31 @@ public class ProxyBankkonto implements InterfaceBankkonto {
 			int function = sc1.nextInt();	
 			switch (function) {
 			case 1:
+				//Abheben
 				System.out.printf("Kontostand:\t\t%,.2f €\n",kntstand);
 				System.out.print("Menge eingeben:");
 				amount = sc1.nextInt();
 				kntstand-=amount;
 				System.out.printf("Abgehoben:\t\t%,.2f €\n",amount);
 				if(kntstand<0) {
-					System.out.printf("Neuer Kontostand:\t%,.2f €\n",kntstand+"\t(Achtung Sie sind im Minus)");
+					System.out.printf("Neuer Kontostand:\t%,.2f €\t(Achtung Sie sind im Minus)\n",kntstand);
 				}
-				System.out.printf("Neuer Kontostand:\t%,.2f €\n",kntstand);
+				else System.out.printf("Neuer Kontostand:\t%,.2f €\n",kntstand);
 				break;
 			case 2:
+				//Einzahlen
 				System.out.printf("Kontostand:\t\t%,.2f €\n",kntstand);
 				System.out.print("Menge eingeben: ");
 				amount = sc1.nextInt();
 				kntstand+=amount;
-				System.out.printf("Eingezahlt:\t%,.2f €\n",amount);
+				System.out.printf("Eingezahlt:\t\t%,.2f €\n",amount);
 				System.out.printf("Neuer Kontostand:\t%,.2f €\n",kntstand);
 				break;
 			case 3:
-				//			System.out.println("Name:\t\t"+name);
-				//			System.out.println("Kontonummer:\t"+kntnr);
-				//			System.out.println("Kontostand:\t"+kntstand);
+				//Kontostand ansehen
+				//System.out.println("Name:\t\t"+name);
+				//System.out.println("Kontonummer:\t"+kntnr);
+				//System.out.println("Kontostand:\t"+kntstand);
 				konto.showData();
 				break;
 			default: System.out.println(fehler); 
